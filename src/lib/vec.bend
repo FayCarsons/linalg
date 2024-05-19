@@ -67,7 +67,7 @@ object Vec4 { x, y, z, w }
   let y = (cross z1 x2 x1 z2)
   let z = (cross x1 y2 y1 x2)
   (Vec3 x y z)
-le
+
 (Vec2.norm (Vec2 x y)) = (sqrt (+ (* x x) (* y y)))
 (Vec3.norm (Vec3 x y z)) = (sqrt (+ (+ (* x x) (* y y)) (* z z)))
 (Vec4.norm (Vec4 x y z w)) = 
@@ -75,7 +75,7 @@ le
   let y = (* y y)
   let z = (* z z)
   let w = (* w w)
-  let sum = (+ x (+ y (+ z w)))
+  let sum = (+ (+ x y) (+ z w))
   (sqrt sum)
 
 (Vec2.normalize vec) = 
