@@ -1,4 +1,4 @@
-# Linear Algebra in *Bend*!
+# Linear Algebra in Bend!
 This is a WIP library, currently aiming for naive implementations.
 At the moment, the goal is to include analogues of GLSL/WGSL types for graphics,
 as well as more general (and more easily parallelized) N-dimensional vectors and matrices.
