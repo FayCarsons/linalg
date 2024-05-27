@@ -1,9 +1,8 @@
+#use math
+
 object Vec2 { x, y }
 object Vec3 { x, y, z }
 object Vec4 { x, y, z, w }
-
-# Will be replaced by inport of math/stdlib 
-(sqrt n) = n
 
 Vec2.splat n = (Vec2 n n)
 Vec3.splat n = (Vec3 n n n)
@@ -44,7 +43,6 @@ Vec4.muls (Vec4 x y z w) scalar = (Vec4 (* x scalar) (* y scalar) (* z scalar) (
 Vec2.divs (Vec2 x y) scalar = (Vec2 (/ x scalar) (/ y scalar))
 Vec3.divs (Vec3 x y z) scalar = (Vec3 (/ x scalar) (/ y scalar) (/ z scalar))
 Vec4.divs (Vec4 x y z w) scalar = (Vec4 (/ x scalar) (/ y scalar) (/ z scalar) (/ w scalar))
-
 
 # Will be updated if/when multi-arity arithmetic is possible o_0
 
@@ -108,6 +106,3 @@ vec4.norm vec =
         Vec4: (Vec4 (/ vec.x mag) (/ vec.y mag) (/ vec.z mag) (/ vec.w mag))
     }
   }
-
-## Fails with "assertion failed: expo >= -63 && expo <= 63"
-Main = ""
